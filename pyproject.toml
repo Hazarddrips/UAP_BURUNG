@@ -1,0 +1,15 @@
+[project]
+name = "GITBURUNG"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Hazarddrips", email = "haidarzj123@gmail.com"},
+]
+dependencies = ["tensorflow>=2.18.0", "keras>=3.7.0", "numpy>=2.0.2", "streamlit>=1.12.0", "pillow>=11.0.0"]
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
