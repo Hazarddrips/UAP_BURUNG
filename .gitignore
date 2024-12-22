@@ -1,0 +1,59 @@
+# PDM cache and environment directories
+__pypackages__/
+.pdm.toml
+.pdm.lock
+.pdm-Python
+pdm.lock
+
+# Python bytecode and caches
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual environments (if used alongside PDM)
+.venv/
+.env/
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Test results and coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache/
+pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Temporary and backup files
+*.bak
+*.swp
+*.tmp
+*.temp
+
+# Logs and dumps
+*.log
+*.out
+*.err
+
+# FIles
+backup.py
