@@ -101,7 +101,7 @@ Gambar di atas menunjukkan Classification Report dari model ResNet50 setelah pre
 
 ## Link Live Demo
 
-[Link Live Demo]()
+[Link Live Demo : UAPBURUNG514.streamlit.app](https://uapburung514.streamlit.app/)
 
 ### Tampilan HomePage & Upload Image
 
