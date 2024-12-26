@@ -83,7 +83,7 @@ b. Plot di atas menunjukkan bahwa training loss menurun dari **1.5** ke **1.1**,
 
 ![image](./src/assetsReadme/ResNet_CF.png)
 
-Gambar di atas menunjukkan Classification Report dari model ResNet50 setelah prediksi pada Testing Set. Model mencapai akurasi keseluruhan sebesar **61%** dengan skor presisi, recall, dan f1-score yang seimbang pada empat kelas: Common Kingfisher, Gray Wagtail, Hoopoe, dan House Crow. Hasil ini menunjukkan kemampuan model dalam mengenali pola pada data burung hias dengan tingkat generalisasi yang cukup baik.
+Gambar di atas menunjukkan Classification Report dari model ResNet50 setelah prediksi pada Testing Set. Model mencapai akurasi keseluruhan sebesar **61%** dengan skor presisi, recall, dan f1-score yang seimbang pada empat kelas: Common Kingfisher, Gray Wagtail, Hoopoe, dan House Crow. Hasil ini menunjukkan kemampuan model dalam mengenali pola pada data burung hias dengan tingkat generalisasi yang cukup baik. 
 
 ![image](./src/assetsReadme/ResNet_CM.png)
 
@@ -106,6 +106,13 @@ b. Plot menunjukkan training loss stabil di sekitar 0.03 hingga 0.08, sedangkan 
 Gambar di atas menunjukkan Classification Report dari model ResNet50 setelah prediksi pada Testing Set. Model mencapai akurasi keseluruhan sebesar 97% dengan skor presisi, recall, dan f1-score yang tinggi pada empat kelas: Common Kingfisher, Gray Wagtail, Hoopoe, dan House Crow. Hasil ini menunjukkan performa model yang sangat baik dalam mengenali dan mengklasifikasikan gambar burung hias dengan tingkat generalisasi yang sangat tinggi.
 
 ![image](./src/assetsReadme/MobileNetV2_CM.png)
+
+### Temuan
+Namun ada temuan saat dilakukan test pada aplikasi dengan menggunakan 4 kelas menggunakan kedua model, ditemukan bahwa ResNet50 dengan akurasi 61% lebih baik dalam mengklasifikasikan jenis burung dibandingkan MobileNetV2 yang memiliki akurasi 97%, dapat diasumsikan bahwa kompleksitas model ResNet50 dibanding model MobileNetv2 mempengaruhi hasil klasifikasi dan memerlukan training lebih lama untuk mencapai akurasi yang tinggi. 
+
+### Kesimpulan
+MobileNetV2 menunjukkan performa jauh lebih unggul dibandingkan ResNet50 dengan akurasi keseluruhan sebesar 97%, presisi, recall, dan f1-score tinggi, serta konsistensi pada validation loss dan accuracy, menjadikannya model yang sangat cocok untuk klasifikasi burung hias. Sementara itu, ResNet50 hanya mencapai akurasi 61% dan cenderung underfitting, membutuhkan dataset lebih besar atau fine-tuning untuk meningkatkan performanya. Dengan efisiensi dan akurasi yang sangat baik, MobileNetV2 direkomendasikan untuk digunakan, sementara ResNet50 dapat dioptimalkan lebih lanjut untuk hasil yang lebih baik. N
+
 
 ## Link Live Demo
 
