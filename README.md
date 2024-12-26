@@ -1,8 +1,8 @@
 ## ✨ BirdKlazzz: Klasifikasi Otomatis Jenis Ternak Burung Hias dengan ResNet50 dan MobileNetV2 ✨
 
-<div style="text-align: center;">
-  <img src="src/assetsReadme/Aes_CommonKingFisher.jpg" alt="" width="700">
-</div>
+<p align="center">
+  <img src="src/assetsReadme/Aes_CommonKingFisher.jpg" alt="" width="500">
+</p>
 
 ## Deskripsi Proyek
 Proyek ini bertujuan untuk mengembangkan sebuah sistem klasifikasi gambar yang dapat mengenali dan membedakan jenis burung hias ternak menggunakan teknik ResNet50 dan MobileNetV2. Dataset yang digunakan mencakup 25 spesies burung, menyediakan tantangan menarik untuk membangun model klasifikasi yang akurat dan aplikatif dalam industri ternak burung hias. Sistem ini diharapkan dapat mempermudah peternak burung hias dalam mengidentifikasi spesies burung secara otomatis melalui gambar, sehingga meningkatkan efisiensi dalam pengelolaan ternak.
@@ -16,12 +16,15 @@ Model yang digunakan: Pre Trained Model ***ResNet50***  dan Pre Trained Model **
 
 <img src="src/assetsReadme/1_resnet_arch.png" alt="ResNet Architecture" width="700">
 
+ResNet-50 adalah salah satu varian ResNet yang memiliki 50 layer. Jika pada varian ResNet sebelumnya dilakukan skip connection sebanyak 2 layer, maka ResNet- 50 melewati 3 layer dan terdapat 1 X 1 convolution layer (Miranda, Novamizanti, & Rizal, 2020).
+
 **MobileNetV2 Architecture** ✨
 
 ![image](./src/assetsReadme/2_mobilenetv2arch.png)
 
+MobileNet V2 adalah salah satu arsitektur Convolutional neural network (CNN) berbasis ponsel yang dapat digunakan untuk mengatasi kebutuhan akan computing resource berlebih.MobileNetV2 menambahkan dua fitur baru yaitu: 1) linear bottleneck, dan 2) shortcut connections antar bottlenecks.
 ## Overview Dataset
-Dataset ini awalnya terdiri atas 22.6 ribu gambar dari 25 spesies burung (berbagai gambar RGB) [berikut] (https://www.kaggle.com/datasets/arjunbasandrai/25-indian-bird-species-with-226k-images), namun setelah dilakukan proses seleksi dan pengaturan, jumlah data yang digunakan untuk pelatihan telah dibatasi menjadi sekitar 3698 gambar. Dataset ini telah dibagi dengan rapi dan disesuaikan untuk keperluan klasifikasi burung hias ternak, sehingga dapat digunakan secara efektif dalam pengujian dan pelatihan model klasifikasi.  Data yang terbagi menjadi 70% sebagai *Training Set*, 20% sebagai *Validation Set*, dan 10% sebagai *Testing Set*, dimana pada setiap Set, terdapat 4 Label Class Label Class yaitu: *Common Kingfisher*, *Gray Wagtail*, *Hoopoe*, *House Crow*.
+Dataset ini awalnya terdiri atas 22.6 ribu gambar dari 25 spesies burung (berbagai gambar RGB) [berikut] (https://www.kaggle.com/datasets/arjunbasandrai/25-indian-bird-species-with-226k-images), namun setelah dilakukan proses seleksi dan pengaturan, jumlah data yang digunakan untuk pelatihan telah dibatasi menjadi sekitar 3698 gambar. Dataset ini telah dibagi dengan rapi dan disesuaikan untuk keperluan klasifikasi burung hias ternak, sehingga dapat digunakan secara efektif dalam pengujian dan pelatihan model klasifikasi.  Data yang terbagi menjadi 70% sebagai *Training Set*, 20% sebagai *Validation Set*, dan 10% sebagai *Testing Set*, dimana pada setiap Set, terdapat 4 Label Class yang telah seimbang terbagi menjadi 924 citra yaitu: *Common Kingfisher*, *Gray Wagtail*, *Hoopoe*, *House Crow*.
  
 ## Langkah Instalasi
 
@@ -30,19 +33,24 @@ a. Model
 2. Run Script Settings To Extracted Dataset (Script.ipynb)
 3. Run UAP_BURUNG_SMALL_MOBILENETv2.ipynb
 4. Run UAP_BURUNG_SMALL_ResNet50.ipynb
-5. Save Kedua Model
+5. Download Kedua Model
 
 b. Streamlit
 1. Clone Project Ini
 2. PDM : [Dokumentasi PDM](https://pdm-project.org/)
-3. PDM init 
-4. PDM add tensorflow numpy streamlit
-5. Run app.py melalui localhost
-
+3. Insiasi PDM :
+    ```bash
+    PDM init 
+4. Install Requirements :
+    ```bash 
+    PDM add tensorflow numpy streamlit
+5. Run :
+    ```bash
+    streamlit run app_2model.py
 c. Deploy Streamlit Model
 1. Upload All File Diluar Environtment PDM (.gitignore)
-2. Deploy dan Bake melalui streamlit dengan terhubung dengan github[Dokumentasi Streamlit](https://docs.streamlit.io/)
-3. Run dengan address deployment dengan akhiran **.io**
+2. Deploy dan Bake melalui streamlit dengan terhubung dengan github [Dokumentasi Streamlit](https://docs.streamlit.io/)
+3. Run dengan address deployment dengan akhiran **.app**
 
 ## Deskripsi : Model, Hasil, Analisis
 
@@ -66,7 +74,7 @@ Hasil dari model ResNet50 yang telah dibangun adalah sebagai berikut :
 
 ![image](./src/assetsReadme/ResNet_Summary.png)
 
-Berikut hasil dari Model setelah dilakukan *Fine-Tuning* menggunakan dataset RPS ::
+Berikut hasil dari learning curve model :
 
 ![image](./src/assetsReadme/ResNet_Curve.png)
 
@@ -114,3 +122,4 @@ Gambar di atas menunjukkan Classification Report dari model ResNet50 setelah pre
 ## Author 👨‍💻
 
 - [@HaidarZ](https://github.com/hazarddrips)
+- Haidar Zakki J (202110370311514)
